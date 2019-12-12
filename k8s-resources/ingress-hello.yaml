@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: my-hello
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /hello
+            backend:
+              serviceName: my-hello
+              servicePort: 80

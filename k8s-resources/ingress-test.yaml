@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: my-hello-test
+spec:
+  rules:
+    - host: joachim-test.k8s-class.pelo.tech
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: my-hello
+              servicePort: 80
