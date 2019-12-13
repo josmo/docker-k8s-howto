@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: confluence
+spec:
+  rules:
+    - host: joachim-confluence.k8s-class.pelo.tech
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: confluence
+              servicePort: 80
